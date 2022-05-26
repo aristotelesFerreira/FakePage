@@ -1,0 +1,10 @@
+{
+    "templates": [
+        {
+            "name": "Google Drive",
+            "dir_name": "googledrive",
+            "module": true,
+            "import_file": "mod_gdrive"
+        }
+    ]
+}
